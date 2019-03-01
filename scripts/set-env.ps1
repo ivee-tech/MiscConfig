@@ -1,0 +1,5 @@
+﻿[System.Environment]::SetEnvironmentVariable("KeyVaultUri", "https://[keyvault-name].vault.azure.net", [System.EnvironmentVariableTarget]::Machine)
+[System.Environment]::SetEnvironmentVariable("TenantId", "[Tenant Id]", [System.EnvironmentVariableTarget]::Machine)
+[System.Environment]::SetEnvironmentVariable("ida:ClientId", "[Client Id]", [System.EnvironmentVariableTarget]::Machine)
+[System.Environment]::SetEnvironmentVariable("ida:ClientSecret", "[Client secret]", [System.EnvironmentVariableTarget]::Machine)
+[System.Environment]::SetEnvironmentVariable("Name", "Lois Griffin", [System.EnvironmentVariableTarget]::Machine)
