@@ -7,7 +7,7 @@ As deployment environments become more and more complex, simply storing the conf
 A solution to make your application resilient and agnostic to the configuration data source, whether it's Xml or JSON files, environment variables, database, key vault, etc., is to use dependency injection. This way, you can decouple your code from particular configuration implementations.
 
 ## Configuration implementations
-To unify the configuration, we can simply use an interface which our code will use to read the configuration settings:
+To unify the configuration, we can simply use an interface as below:
 
 ``` C#
     public interface IConfigReader
@@ -151,7 +151,7 @@ To configure the settings as environment variables, run the following script (ma
 
 If you don't have Administrator permissions, change the target to user and modify the application code to use <code>EnvironmentVariableTarget.User</code>:
 ``` C#
-    IConfigReader envConfig = new EnvVarsConfigReader(EnvironmentVariableTarget.Machine);
+    IConfigReader envConfig = new EnvVarsConfigReader(EnvironmentVariableTarget.User);
 ```
 
 To run the application, make sure you have .NET Core v2.2 installed and run the following command in the **MiscConfig** project folder:
